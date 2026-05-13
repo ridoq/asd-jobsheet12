@@ -33,9 +33,19 @@ Mengapa head dan tail harus menunjuk node yang sama ketika linked list masih kos
 #   Percobaan 2
 
 ##  Soal
+1.  Perhatikan potongan kode berikut pada method removeFirst():
+
+    ```java
+        head = head.next;
+        head.prev = null;        
+    ```
+Jelaskan fungsi masing-masing statement tersebut pada proses penghapusan node!
+
+2.	Modifikasi method removeFirst() dan removeLast() agar program menampilkan data yang berhasil dihapus!
 
 ---
 
 ##  Jawaban
-
+1.  Pada proses penghapusan node awal, statement head = head.next; berfungsi untuk menggeser posisi pointer head ke node berikutnya sehingga node kedua resmi menjadi elemen pertama yang baru, sedangkan statement head.prev = null; berfungsi untuk memutus koneksi pointer mundur dari head yang baru tersebut agar tidak lagi terhubung dengan node pertama yang lama (yang mau dihapus).
+2.  Untuk memodifikasi method removeFirst() dan removeLast() agar menampilkan data yang dihapus, kita perlu memanggil method tampil() dari data milik head atau tail tepat sebelum struktur pointernya diubah atau di-null-kan.
 ---
